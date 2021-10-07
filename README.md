@@ -4,5 +4,5 @@ Procedure for Crack classification can be found in this <a href="https://medium.
 
 ##Sample classification Results
 <div align=center>
-  <img src="temp.jpg" alt="Visualization Demo" width="800"/>
+  <img src="temp.png" alt="Visualization Demo" width="800"/>
 </div>
