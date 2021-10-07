@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 import torchvision.transforms as transforms
 
-from src.model import CrackXai
+from src.model import CrackClassifier
 from src.dataloader import CrackDataset
 from tqdm import tqdm
 import os
@@ -81,14 +81,14 @@ def train():
         os.makedirs(logs_dir)
     logger = SummaryWriter(logs_dir)
 
-    model = CrackXai(num_classes).to(device)
+    model = CrackClassifier(num_classes).to(device)
     criterion = nn.CrossEntropyLoss(reduction='mean')
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 
 
     #Train only the fully connected layers
-    for name, param in model.crack.named_parameters():
+    for name, param in model.named_parameters():
         if "fc.0.weight" in name or "fc.0.bias" in name:
             param.requires_grad = True
         elif "fc.2.weight" in name or "fc.2.bias" in name:
@@ -111,9 +111,7 @@ def train():
             imgs = imgs.to(device)
             labels = torch.squeeze(labels)
             labels = labels.to(device)
-            print(labels)
             outputs = model(imgs)
-            print(outputs)
             loss = criterion(outputs, labels)
             optimizer.zero_grad()
             loss.backward()
