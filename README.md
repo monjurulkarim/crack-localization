@@ -6,3 +6,8 @@ Procedure for Crack classification can be found in this <a href="https://medium.
 <div align=center>
   <img src="temp.png" alt="Visualization Demo" width="800"/>
 </div>
+
+## Sample grad-cam visualization
+<div align=center>
+  <img src="grad-cam.png" alt="Visualization grad-cam" width="800"/>
+</div>
