@@ -5,6 +5,15 @@ Procedure for Crack classification and Grad-CAM visualization can be found in th
 ## Requirements
 - Pytorch (>=1.9)
 - torchvision (>=0.4)
+- cv2
+- pil
+- matplotlib
+
+## Getting started
+To train the network:
+```shell
+python train.py
+```
 
 ## Sample classification Results
 <div align=center>
