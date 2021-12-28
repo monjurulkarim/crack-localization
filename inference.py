@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import os
 import random
-from src.model import CrackXai
+from src.model import CrackClassifier
 from src.dataloader import CrackDataset
 import argparse
 
@@ -18,12 +18,12 @@ device = ("cuda" if torch.cuda.is_available() else "cpu")
 
 transform = transforms.Compose(
         [
-            transforms.Resize((32, 32)),
+            transforms.Resize((64, 64)),
             transforms.ToTensor(),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
         ]
     )
-num_epochs = 5
+num_epochs = 10
 num_classes = 2
 learning_rate = 0.001
 batch_size = 32
@@ -63,7 +63,7 @@ def inference():
     list_test = os.listdir(test_dir)
 
     len_img_list = len(list_test)
-    model = CrackXai(num_classes).to(device)
+    model = CrackClassifier(num_classes).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     model.load_state_dict(torch.load('snapshot/crack_model.pth'))
 
