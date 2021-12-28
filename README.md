@@ -23,6 +23,9 @@ To generate grad-cam visual explanation (heat maps) run the following:
 python xai.py
 ```
 
+## Customizing dataset
+The procedure for using your own dataset is very simple. Just prepare the dataset in the same way shown inside the directory folder `data/`. You can also increase the number of classes as you need. All you need to change the final layer of the architecture.
+
 ## Sample classification Results
 <div align=center>
   <img src="temp.png" alt="Visualization Demo" width="800"/>
