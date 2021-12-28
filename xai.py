@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import os
 import random
-from src.model import CrackXai
+from src.model import CrackClassifier
 from src.dataloader import CrackDataset
 import argparse
 import cv2
@@ -70,11 +70,11 @@ def random_image(len_img_list,test_dir,list_test):
 
 
 def xai():
-    model = CrackXai(num_classes).to(device)
+    model = CrackClassifier(num_classes).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     model.load_state_dict(torch.load('snapshot/crack_model.pth'))
 
-    target_layers = [model.crack.resnet.layer4[-1]]
+    target_layers = [model.resnet.layer4[-1]]
     val_dir = os.path.join(data_path, 'test')
     test_dir = os.path.join(val_dir, p.type)
     list_test = os.listdir(test_dir)
