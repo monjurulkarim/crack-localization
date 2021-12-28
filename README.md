@@ -14,6 +14,10 @@ To train the network:
 ```shell
 python train.py
 ```
+An example inference command:
+```shell
+python inference.py
+```
 
 ## Sample classification Results
 <div align=center>
