@@ -20,7 +20,7 @@ transform = transforms.Compose(
         ]
     )
 
-num_epochs = 25
+num_epochs = 10
 num_classes = 2
 learning_rate = 0.001
 batch_size = 2
@@ -124,7 +124,7 @@ def train():
         model_file = os.path.join(model_dir, 'crack_model.pth')
         if val_acc > best_acc:
             best_acc = val_acc
-            # torch.save(model.state_dict(),model_file)
+            torch.save(model.state_dict(),model_file)
     logger.close()
 
 if __name__ == "__main__":
