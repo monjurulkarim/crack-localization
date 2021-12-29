@@ -8,8 +8,13 @@ The whole procedure for Crack classification and Grad-CAM visualization can be f
 - cv2
 - pil
 - matplotlib
+To create class activation map using the grad-cam method you need to install the package simply by typing:
+```shell
+pip install grad-cam
+```
 
 ## Getting started
+At first clone this repository.
 To train the network:
 ```shell
 python train.py
