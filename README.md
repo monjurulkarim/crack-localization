@@ -16,7 +16,7 @@ pip install grad-cam
 ```
 
 ## Getting started
-At first clone this repository. <br>
+At first clone this repository and install the required dependencies. <br>
 To train the network:
 ```shell
 python train.py
