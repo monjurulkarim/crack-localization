@@ -38,7 +38,7 @@ The procedure for using your own dataset is very simple. Just prepare the datase
   <img src="temp.png" alt="Visualization Demo" width="800"/>
 </div>
 
-## Sample grad-cam visualization
+## Sample grad-cam visualization / Crack localization
 <div align=center>
   <img src="gradcam.png" alt="Visualization grad-cam" width="800"/>
 </div>
