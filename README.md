@@ -9,7 +9,7 @@ This approach uses a traditional CNN for crack classification and Grad-CAM for c
 - pil
 - matplotlib
 <br>
-To create class activation map using the grad-cam method you need to install the package simply by typing:
+We will create class activation maps to highlight the crack location. To create class activation map using the grad-cam method you need to install the package simply by typing:
 
 ```shell
 pip install grad-cam
