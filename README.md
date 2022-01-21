@@ -1,6 +1,6 @@
 # Weakly supervised surface crack localization using Pytorch
 
-This approach uses a traditional CNN for crack classification and Grad-CAM for crack loalization. The whole procedure can be found in this <a href="https://medium.com/@raju.monjurulkarim/tutorial-on-surface-crack-classification-with-visual-explanation-part-1-14542d2ea7ac"> Medium</a> article.</p> 
+This approach uses a traditional CNN for crack classification and Grad-CAM for crack localization. The whole procedure can be found in this <a href="https://medium.com/@raju.monjurulkarim/tutorial-on-surface-crack-classification-with-visual-explanation-part-1-14542d2ea7ac"> Medium</a> article.</p> 
 
 ## Requirements
 - Pytorch (>=1.9)
